@@ -46,20 +46,20 @@ class Program
 
                 case "3":
                     Console.WriteLine("Выберите таблицу для удаления: 1-Животные, 2-Покупатели, 3-Продажи");
-                    var delChoice = Console.ReadLine();
-                    switch (delChoice)
+                    var deletionChoise = Console.ReadLine();
+                    switch (deletionChoise)
                     {
                         case "1":
                             Console.Write("Введите Id животного для удаления: ");
-                            if (int.TryParse(Console.ReadLine(), out int animalIdDel))
-                                DatabaseHelper.DeleteAnimal(animalIdDel);
+                            if (int.TryParse(Console.ReadLine(), out int animalToDeleteId))
+                                DatabaseHelper.DeleteAnimal(animalToDeleteId);
                             else
                                 Console.WriteLine("Неверный ввод.");
                             break;
                         case "2":
                             Console.Write("Введите Id покупателя для удаления: ");
-                            if (int.TryParse(Console.ReadLine(), out int buyerIdDel))
-                                DatabaseHelper.DeleteBuyer(buyerIdDel);
+                            if (int.TryParse(Console.ReadLine(), out int buyerToDeleteId))
+                                DatabaseHelper.DeleteBuyer(buyerToDeleteId);
                             else
                                 Console.WriteLine("Неверный ввод.");
                             break;
