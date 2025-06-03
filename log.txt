@@ -1,0 +1,46 @@
+
+Новый сеанс: 03/06/2025 14:11:30
+03/06/2025 14:11:47: Просмотр таблицы Животные
+03/06/2025 14:13:12: Добавлено животное с Id=1
+03/06/2025 14:13:30: Добавлено животное с Id=2
+03/06/2025 14:13:33: Просмотр таблицы Животные
+03/06/2025 14:15:03: Выполнен запрос 1: Найти всех животных вида 'Собака'
+03/06/2025 14:17:57: Начата загрузка базы данных из файла /book.csv
+03/06/2025 14:17:57: Ошибка при загрузке базы данных: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+03/06/2025 14:18:21: Начата загрузка базы данных из файла ./book.csv
+03/06/2025 14:18:21: Ошибка при загрузке базы данных: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+03/06/2025 14:18:25: Начата загрузка базы данных из файла ./
+03/06/2025 14:18:25: Ошибка при загрузке базы данных: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+03/06/2025 14:20:26: Начата загрузка базы данных из файла C:\book.csv
+03/06/2025 14:20:26: Ошибка при загрузке базы данных: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+03/06/2025 14:21:56: Начата загрузка базы данных из файла ./mybook.xlsx
+03/06/2025 14:21:56: Ошибка при загрузке базы данных: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+03/06/2025 14:25:59: Начата загрузка базы данных из файла ./mybook.xlsx
+03/06/2025 14:25:59: Ошибка при загрузке базы данных: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+
+Новый сеанс: 03/06/2025 14:26:23
+03/06/2025 14:26:30: Начата загрузка базы данных из файла ./mybook.xlsx
+03/06/2025 14:26:30: Ошибка при загрузке базы данных: Object reference not set to an instance of an object.
+03/06/2025 14:27:33: Начата загрузка базы данных из файла C:\mybook.xlsx
+03/06/2025 14:27:33: Ошибка при загрузке базы данных: Object reference not set to an instance of an object.
+03/06/2025 14:34:07: Начата загрузка базы данных из файла ./base.xlxs
+03/06/2025 14:34:07: Ошибка при загрузке базы данных: Object reference not set to an instance of an object.
+03/06/2025 14:34:16: Начата загрузка базы данных из файла ./base.xlsx
+03/06/2025 14:34:16: Ошибка при загрузке базы данных: The input string 'ЕГор' was not in a correct format.
+03/06/2025 14:37:18: Начата загрузка базы данных из файла ./database.xlsx
+03/06/2025 14:37:18: Ошибка при загрузке базы данных: The input string '12.01.2005' was not in a correct format.
+03/06/2025 14:39:57: Начата загрузка базы данных из файла ./databasee.xlsx
+03/06/2025 14:39:57: Ошибка при загрузке базы данных: The input string '5/1/00 0:00' was not in a correct format.
+03/06/2025 14:42:33: Начата загрузка базы данных из файла ./data.xlsx
+03/06/2025 14:42:33: Ошибка при загрузке базы данных: The input string '' was not in a correct format.
+03/06/2025 14:45:07: Начата загрузка базы данных из файла ./dataa.xlsx
+03/06/2025 14:45:07: Ошибка при загрузке базы данных: The input string '' was not in a correct format.
+03/06/2025 14:46:09: Начата загрузка базы данных из файла ./dataa.xlsx
+03/06/2025 14:46:09: Ошибка при загрузке базы данных: The input string '' was not in a correct format.
+
+Новый сеанс: 03/06/2025 14:48:13
+03/06/2025 14:48:17: Начата загрузка базы данных из файла ./dataa.xlsx
+03/06/2025 14:48:18: База данных успешно загружена.
+03/06/2025 14:48:27: Просмотр таблицы Животные
+03/06/2025 14:48:55: Изменено животное с Id=5
+03/06/2025 14:49:02: Просмотр таблицы Животные
