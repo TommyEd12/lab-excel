@@ -10,24 +10,24 @@ public static class DatabaseHelper
     public static List<Buyer> Buyers = new List<Buyer>();
     public static List<Sale> Sales = new List<Sale>();
 
-    private static string logFilePath = "";
+    private static string _logFilePath = "";
 
     public static void InitLogger(bool newFile)
     {
-        logFilePath = "log.txt";
+        _logFilePath = "log.txt";
         if (newFile)
         {
-            File.WriteAllText(logFilePath, $"Лог сеанса: {DateTime.Now}\n");
+            File.WriteAllText(_logFilePath, $"Лог сеанса: {DateTime.Now}\n");
         }
         else
         {
-            File.AppendAllText(logFilePath, $"\nНовый сеанс: {DateTime.Now}\n");
+            File.AppendAllText(_logFilePath, $"\nНовый сеанс: {DateTime.Now}\n");
         }
     }
 
     public static void Log(string message)
     {
-        File.AppendAllText(logFilePath, $"{DateTime.Now}: {message}\n");
+        File.AppendAllText(_logFilePath, $"{DateTime.Now}: {message}\n");
     }
 
     public static void LoadDatabaseFromExcel(string filePath)

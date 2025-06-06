@@ -94,6 +94,7 @@
                             }
                             else Console.WriteLine("Неверный ввод.");
                             break;
+
                         case "2":
                             Console.Write("Введите Id покупателя для изменения: ");
                             if (int.TryParse(Console.ReadLine(), out int buyerIdEdit))
@@ -111,6 +112,7 @@
                             }
                             else Console.WriteLine("Неверный ввод.");
                             break;
+
                         case "3":
                             Console.Write("Введите Id животного продажи для изменения: ");
                             bool animalParsed = int.TryParse(Console.ReadLine(), out int animalIdSaleEdit);
@@ -170,6 +172,7 @@
                             }
                             else Console.WriteLine("Неверный ввод.");
                             break;
+                            
                         case "3":
                             Console.Write("Введите Id животного продажи: ");
                             bool animalParsedAdd = int.TryParse(Console.ReadLine(), out int animalIdSaleAdd);
