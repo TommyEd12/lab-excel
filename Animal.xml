@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>AnimalDatabase</name>
+    </assembly>
+    <members>
+        <member name="T:Animal">
+            <summary>
+            Класс, представляющий животное в базе данных.
+            Содержит информацию о виде и породе животного.
+            </summary>
+        </member>
+        <member name="P:Animal.Id">
+            <summary>
+            Уникальный идентификатор животного.
+            </summary>
+        </member>
+        <member name="P:Animal.Species">
+            <summary>
+            Вид животного (например, "Собака", "Кошка").
+            </summary>
+        </member>
+        <member name="P:Animal.Breed">
+            <summary>
+            Порода животного (например, "Доберман", "Персидская").
+            </summary>
+        </member>
+        <member name="M:Animal.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Конструктор класса Animal.
+            </summary>
+            <param name="id">Уникальный идентификатор животного.</param>
+            <param name="species">Вид животного.</param>
+            <param name="breed">Порода животного.</param>
+        </member>
+        <member name="M:Animal.ToString">
+            <summary>
+            Возвращает строковое представление объекта Animal.
+            </summary>
+            <returns>Строка в формате: "Id: [Id], Вид: [Species], Порода: [Breed]"</returns>
+        </member>
+    </members>
+</doc>

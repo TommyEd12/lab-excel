@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>AnimalDatabase</name>
+    </assembly>
+    <members>
+        <member name="T:Sale">
+            <summary>
+            Класс, представляющий запись о продаже животного.
+            Связывает животное с покупателем и содержит информацию о сделке.
+            </summary>
+        </member>
+        <member name="P:Sale.AnimalId">
+            <summary>
+            Идентификатор проданного животного.
+            </summary>
+        </member>
+        <member name="P:Sale.BuyerId">
+            <summary>
+            Идентификатор покупателя.
+            </summary>
+        </member>
+        <member name="P:Sale.Price">
+            <summary>
+            Цена продажи.
+            </summary>
+        </member>
+        <member name="P:Sale.Date">
+            <summary>
+            Дата совершения продажи.
+            </summary>
+        </member>
+        <member name="M:Sale.#ctor(System.Int32,System.Int32,System.Decimal,System.DateTime)">
+            <summary>
+            Конструктор класса Sale.
+            </summary>
+            <param name="animalId">Идентификатор животного.</param>
+            <param name="buyerId">Идентификатор покупателя.</param>
+            <param name="price">Цена продажи.</param>
+            <param name="date">Дата продажи.</param>
+        </member>
+        <member name="M:Sale.ToString">
+            <summary>
+            Возвращает строковое представление объекта Sale.
+            </summary>
+            <returns>Строка в формате: "Животное Id: [AnimalId], Покупатель Id: [BuyerId], Цена: [Price], Дата: [Date]"</returns>
+        </member>
+    </members>
+</doc>

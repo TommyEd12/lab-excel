@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>AnimalDatabase</name>
+    </assembly>
+    <members>
+        <member name="T:Buyer">
+            <summary>
+            Класс, представляющий покупателя в базе данных.
+            Содержит персональную информацию о покупателе.
+            </summary>
+        </member>
+        <member name="P:Buyer.Id">
+            <summary>
+            Уникальный идентификатор покупателя.
+            </summary>
+        </member>
+        <member name="P:Buyer.Name">
+            <summary>
+            Имя покупателя.
+            </summary>
+        </member>
+        <member name="P:Buyer.Age">
+            <summary>
+            Возраст покупателя.
+            </summary>
+        </member>
+        <member name="P:Buyer.Address">
+            <summary>
+            Адрес покупателя.
+            </summary>
+        </member>
+        <member name="M:Buyer.#ctor(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор класса Buyer.
+            </summary>
+            <param name="id">Уникальный идентификатор покупателя.</param>
+            <param name="name">Имя покупателя.</param>
+            <param name="age">Возраст покупателя.</param>
+            <param name="address">Адрес покупателя.</param>
+        </member>
+        <member name="M:Buyer.ToString">
+            <summary>
+            Возвращает строковое представление объекта Buyer.
+            </summary>
+            <returns>Строка в формате: "Id: [Id], Имя: [Name], Возраст: [Age], Адрес: [Address]"</returns>
+        </member>
+    </members>
+</doc>

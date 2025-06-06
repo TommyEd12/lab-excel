@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>AnimalDatabaseProgram</name>
+    </assembly>
+    <members>
+        <member name="T:Program">
+            <summary>
+            Главный класс программы для работы с базой данных животных и покупателей.
+            Предоставляет консольный интерфейс для управления данными.
+            </summary>
+        </member>
+        <member name="M:Program.Main">
+            <summary>
+            Точка входа в программу. Обеспечивает взаимодействие с пользователем через консоль.
+            </summary>
+            <remarks>
+            Программа предоставляет следующие возможности:
+            - Загрузка базы данных из Excel файла
+            - Просмотр таблиц (Животные, Покупатели, Продажи)
+            - Удаление, изменение и добавление элементов
+            - Выполнение запросов к базе данных
+            - Ведение лог-файла
+            </remarks>
+        </member>
+    </members>
+    <menu>
+        <item choice="1">
+            <summary>Загрузить базу данных из Excel</summary>
+            <description>Загружает данные из указанного Excel файла в базу данных программы.</description>
+            <param name="path">Путь к Excel файлу</param>
+        </item>
+        <item choice="2">
+            <summary>Просмотреть таблицы</summary>
+            <description>Отображает содержимое выбранной таблицы.</description>
+            <subitem choice="1">Таблица Животных</subitem>
+            <subitem choice="2">Таблица Покупателей</subitem>
+            <subitem choice="3">Таблица Продаж</subitem>
+        </item>
+        <item choice="3">
+            <summary>Удалить элемент</summary>
+            <description>Удаляет запись из выбранной таблицы по указанному идентификатору.</description>
+            <subitem choice="1">
+                <description>Удаление животного по ID</description>
+                <param name="animalToDeleteId">ID животного для удаления</param>
+            </subitem>
+            <subitem choice="2">
+                <description>Удаление покупателя по ID</description>
+                <param name="buyerToDeleteId">ID покупателя для удаления</param>
+            </subitem>
+            <subitem choice="3">
+                <description>Удаление продажи по ID животного и ID покупателя</description>
+                <param name="animalIdSaleDel">ID животного в продаже</param>
+                <param name="buyerIdSaleDel">ID покупателя в продаже</param>
+            </subitem>
+        </item>
+        <item choice="4">
+            <summary>Изменить элемент</summary>
+            <description>Редактирует запись в выбранной таблице по указанному идентификатору.</description>
+            <subitem choice="1">
+                <description>Изменение данных животного</description>
+                <param name="animalIdEdit">ID животного</param>
+                <param name="species">Новый вид животного</param>
+                <param name="breed">Новая порода животного</param>
+            </subitem>
+            <subitem choice="2">
+                <description>Изменение данных покупателя</description>
+                <param name="buyerIdEdit">ID покупателя</param>
+                <param name="name">Новое имя</param>
+                <param name="age">Новый возраст</param>
+                <param name="address">Новый адрес</param>
+            </subitem>
+            <subitem choice="3">
+                <description>Изменение данных продажи</description>
+                <param name="animalIdSaleEdit">ID животного в продаже</param>
+                <param name="buyerIdSaleEdit">ID покупателя в продаже</param>
+                <param name="price">Новая цена</param>
+                <param name="date">Новая дата продажи (гггг-мм-дд)</param>
+            </subitem>
+        </item>
+        <item choice="5">
+            <summary>Добавить элемент</summary>
+            <description>Добавляет новую запись в выбранную таблицу.</description>
+            <subitem choice="1">
+                <description>Добавление нового животного</description>
+                <param name="animalIdAdd">ID животного</param>
+                <param name="species">Вид животного</param>
+                <param name="breed">Порода животного</param>
+            </subitem>
+            <subitem choice="2">
+                <description>Добавление нового покупателя</description>
+                <param name="buyerIdAdd">ID покупателя</param>
+                <param name="name">Имя</param>
+                <param name="age">Возраст</param>
+                <param name="address">Адрес</param>
+            </subitem>
+            <subitem choice="3">
+                <description>Добавление новой продажи</description>
+                <param name="animalIdSaleAdd">ID животного</param>
+                <param name="buyerIdSaleAdd">ID покупателя</param>
+                <param name="price">Цена</param>
+                <param name="date">Дата продажи (гггг-мм-дд)</param>
+                <param name="finalPrice">Итоговая цена</param>
+            </subitem>
+        </item>
+        <item choice="6">
+            <summary>Выполнить запрос</summary>
+            <description>Выполняет один из доступных запросов к базе данных.</description>
+            <subitem choice="1">
+                <description>Найти всех животных определённого вида</description>
+                <param name="species">Вид животного для поиска</param>
+            </subitem>
+            <subitem choice="2">
+                <description>Найти имена покупателей, купивших животных определённого вида</description>
+                <param name="species">Вид животного для поиска</param>
+            </subitem>
+            <subitem choice="3">
+                <description>Общая сумма продаж для каждого покупателя</description>
+            </subitem>
+            <subitem choice="4">
+                <description>Средняя цена продажи для каждого вида животных</description>
+            </subitem>
+        </item>
+        <item choice="0">
+            <summary>Выход</summary>
+            <description>Завершает работу программы.</description>
+        </item>
+    </menu>
+</doc>

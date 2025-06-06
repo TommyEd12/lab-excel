@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>AnimalDatabase</name>
+    </assembly>
+    <members>
+        <member name="T:DatabaseHelper">
+            <summary>
+            Статический класс-помощник для работы с базой данных животных, покупателей и продаж.
+            Обеспечивает загрузку данных, CRUD-операции и выполнение запросов.
+            </summary>
+        </member>
+        
+        <!-- Коллекции данных -->
+        <member name="F:DatabaseHelper.Animals">
+            <summary>
+            Коллекция животных в базе данных.
+            </summary>
+        </member>
+        <member name="F:DatabaseHelper.Buyers">
+            <summary>
+            Коллекция покупателей в базе данных.
+            </summary>
+        </member>
+        <member name="F:DatabaseHelper.Sales">
+            <summary>
+            Коллекция записей о продажах в базе данных.
+            </summary>
+        </member>
+        
+        <!-- Методы работы с логом -->
+        <member name="M:DatabaseHelper.InitLogger(System.Boolean)">
+            <summary>
+            Инициализирует систему логирования.
+            </summary>
+            <param name="newFile">True - создать новый лог-файл, False - продолжить существующий</param>
+        </member>
+        <member name="M:DatabaseHelper.Log(System.String)">
+            <summary>
+            Записывает сообщение в лог-файл с отметкой времени.
+            </summary>
+            <param name="message">Сообщение для записи в лог</param>
+        </member>
+        
+        <!-- Методы загрузки данных -->
+        <member name="M:DatabaseHelper.LoadDatabaseFromExcel(System.String)">
+            <summary>
+            Загружает данные из Excel-файла в базу данных.
+            </summary>
+            <param name="filePath">Путь к Excel-файлу</param>
+            <remarks>
+            Ожидает три листа в файле: "Животные", "Покупатели", "Продажи".
+            Формат данных должен соответствовать структуре классов.
+            </remarks>
+        </member>
+        
+        <!-- Методы отображения данных -->
+        <member name="M:DatabaseHelper.ShowAnimals">
+            <summary>
+            Выводит в консоль список всех животных.
+            </summary>
+        </member>
+        <member name="M:DatabaseHelper.ShowBuyers">
+            <summary>
+            Выводит в консоль список всех покупателей.
+            </summary>
+        </member>
+        <member name="M:DatabaseHelper.ShowSales">
+            <summary>
+            Выводит в консоль список всех продаж.
+            </summary>
+        </member>
+        
+        <!-- Методы удаления -->
+        <member name="M:DatabaseHelper.DeleteAnimal(System.Int32)">
+            <summary>
+            Удаляет животное по указанному ID.
+            </summary>
+            <param name="id">ID животного для удаления</param>
+        </member>
+        <member name="M:DatabaseHelper.DeleteBuyer(System.Int32)">
+            <summary>
+            Удаляет покупателя по указанному ID.
+            </summary>
+            <param name="id">ID покупателя для удаления</param>
+        </member>
+        <member name="M:DatabaseHelper.DeleteSale(System.Int32,System.Int32)">
+            <summary>
+            Удаляет запись о продаже по ID животного и покупателя.
+            </summary>
+            <param name="animalId">ID животного</param>
+            <param name="buyerId">ID покупателя</param>
+        </member>
+        
+        <!-- Методы редактирования -->
+        <member name="M:DatabaseHelper.EditAnimal(System.Int32,System.String,System.String)">
+            <summary>
+            Изменяет данные животного.
+            </summary>
+            <param name="id">ID животного</param>
+            <param name="newSpecies">Новый вид</param>
+            <param name="newBreed">Новая порода</param>
+        </member>
+        <member name="M:DatabaseHelper.EditBuyer(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            Изменяет данные покупателя.
+            </summary>
+            <param name="id">ID покупателя</param>
+            <param name="newName">Новое имя</param>
+            <param name="newAge">Новый возраст</param>
+            <param name="newAddress">Новый адрес</param>
+        </member>
+        <member name="M:DatabaseHelper.EditSale(System.Int32,System.Int32,System.Decimal,System.DateTime)">
+            <summary>
+            Изменяет данные о продаже.
+            </summary>
+            <param name="animalId">ID животного</param>
+            <param name="buyerId">ID покупателя</param>
+            <param name="newPrice">Новая цена</param>
+            <param name="newDate">Новая дата</param>
+        </member>
+        
+        <!-- Методы добавления -->
+        <member name="M:DatabaseHelper.AddAnimal(System.Int32,System.String,System.String)">
+            <summary>
+            Добавляет новое животное в базу данных.
+            </summary>
+            <param name="id">ID животного</param>
+            <param name="species">Вид</param>
+            <param name="breed">Порода</param>
+        </member>
+        <member name="M:DatabaseHelper.AddBuyer(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            Добавляет нового покупателя в базу данных.
+            </summary>
+            <param name="id">ID покупателя</param>
+            <param name="name">Имя</param>
+            <param name="age">Возраст</param>
+            <param name="address">Адрес</param>
+        </member>
+        <member name="M:DatabaseHelper.AddSale(System.Int32,System.Int32,System.Decimal,System.DateTime,System.Decimal)">
+            <summary>
+            Добавляет новую запись о продаже.
+            </summary>
+            <param name="animalId">ID животного</param>
+            <param name="buyerId">ID покупателя</param>
+            <param name="price">Цена</param>
+            <param name="date">Дата продажи</param>
+            <param name="finalPrice">Итоговая цена</param>
+        </member>
+        
+        <!-- Запросы -->
+        <member name="M:DatabaseHelper.Query1(System.String)">
+            <summary>
+            Находит всех животных указанного вида.
+            </summary>
+            <param name="species">Вид животного для поиска</param>
+        </member>
+        <member name="M:DatabaseHelper.Query2(System.String)">
+            <summary>
+            Находит имена покупателей, купивших животных указанного вида.
+            </summary>
+            <param name="species">Вид животного для поиска</param>
+        </member>
+        <member name="M:DatabaseHelper.Query3">
+            <summary>
+            Вычисляет общую сумму продаж для каждого покупателя.
+            </summary>
+        </member>
+        <member name="M:DatabaseHelper.Query4">
+            <summary>
+            Вычисляет среднюю цену продажи для каждого вида животных.
+            </summary>
+        </member>
+    </members>
+</doc>

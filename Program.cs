@@ -1,6 +1,4 @@
-﻿using System;
-
-class Program
+﻿class Program
 {
     static void Main()
     {
@@ -124,11 +122,9 @@ class Program
                                 bool priceParsed = decimal.TryParse(Console.ReadLine(), out decimal price);
                                 Console.Write("Введите новую дату (гггг-мм-дд): ");
                                 bool dateParsed = DateTime.TryParse(Console.ReadLine(), out DateTime date);
-                                Console.Write("Введите новую итоговую цену: ");
-                                bool finalPriceParsed = decimal.TryParse(Console.ReadLine(), out decimal finalPrice);
 
-                                if (priceParsed && dateParsed && finalPriceParsed)
-                                    DatabaseHelper.EditSale(animalIdSaleEdit, buyerIdSaleEdit, price, date, finalPrice);
+                                if (priceParsed && dateParsed)
+                                    DatabaseHelper.EditSale(animalIdSaleEdit, buyerIdSaleEdit, price, date);
                                 else
                                     Console.WriteLine("Неверный ввод данных.");
                             }

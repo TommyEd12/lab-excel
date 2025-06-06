@@ -183,7 +183,7 @@ public static class DatabaseHelper
         }
     }
 
-    public static void EditSale(int animalId, int buyerId, decimal newPrice, DateTime newDate, decimal newFinalPrice)
+    public static void EditSale(int animalId, int buyerId, decimal newPrice, DateTime newDate)
     {
         var sale = Sales.FirstOrDefault(s => s.AnimalId == animalId && s.BuyerId == buyerId);
         if (sale != null)
